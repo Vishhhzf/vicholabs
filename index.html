@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vicho Labs - Soporte Técnico y Componentes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <header class="header" id="main-header">
+    <div class="header-content">
+      <img src="logo.png" alt="Logo Vicho Labs" class="logo" />
+      <h1>VICHO LABS</h1>
+    </div>
+    <nav class="navbar" id="main-nav">
+      <a href="#services">Servicios</a>
+      <a href="#showroom">Componentes</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#commission">Contacto</a>
+      <div class="cart-icon-container" id="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-counter">0</span>
+      </div>
+    </nav>
+    <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <div class="cart-sidebar" id="cart-sidebar">
+    <h2>Tu Carrito</h2>
+    <div id="cart-items"><p>Tu carrito está vacío.</p></div>
+    <div class="cart-total"><strong>Total:</strong> <span id="cart-total-price">$0.00</span></div>
+    <a href="checkout.html" class="checkout-btn">Finalizar Compra</a>
+  </div>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="hero-text">
+        <h2 class="hero-title">Tu PC. <br>Siempre al 100%.</h2>
+        <p class="hero-subtitle">Ofrecemos servicio técnico, mantenciones y venta de componentes a pedido para mantener tu equipo en perfectas condiciones.</p>
+        <a href="#services" class="hero-cta">Ver Servicios</a>
+      </div>
+      <div class="hero-visual">
+        </div>
+    </section>
+
+    <section id="nosotros" class="nosotros-section reveal">
+      <h2 class="section-title">Dr. Vicho</h2>
+      <div class="nosotros-content">
+        <img src="logo.png" alt="Dr. Vicho Logo" class="nosotros-logo">
+        <div class="nosotros-text">
+          <h3>Conoce al especialista detrás del laboratorio.</h3>
+          <p>En Vicho Labs, no somos solo una tienda, somos tu partner tecnológico. Con más de 8 años de experiencia en diagnóstico, ensamblaje y mantenimiento de equipos de alta gama, "Dr. Vicho" (¡ese soy yo!) se encarga personalmente de cada equipo.</p>
+          <p>Nuestra misión es simple: transparencia total, componentes de calidad y un servicio que te de la tranquilidad de que tu inversión está en buenas manos. Ya sea que necesites revivir tu notebook gamer o armar la bestia de tus sueños, estás en el lugar correcto.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <p class="section-subtitle">Contrata tu servicio. Debes traer el equipo a nuestro local. Si necesitas domicilio o retiro, habla con soporte.</p>
+      
+      <div class="services-grid">
+        
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-laptop-medical"></i></div>
+          <h3>Mantenimiento – Notebook Gamer</h3>
+          <ul class="service-includes">
+            <li>Test previo de rendimiento.</li>
+            <li>Limpieza externa e interna minuciosa.</li>
+            <li>Cambio de pasta térmica (Arctic MX-4 / Kryonaut).</li>
+            <li>Limpieza de ventiladores y pads térmicos.</li>
+            <li>Test de rendimiento final.</li>
+            <li><b>Opcional:</b> Formateo, Actualización Bios/drivers, etc.</li>
+          </ul>
+          <p class="service-note">Plazo: 1 a 5 días hábiles.</p>
+          <button class="service-buy-btn add-to-cart-btn" data-id="s1" data-name="Mantenimiento Notebook Gamer" data-price="75000">
+            Contratar por $75.000
+          </button>
+        </div>
+        
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-search-plus"></i></div>
+          <h3>Diagnósticos – PC / Notebooks</h3>
+          <ul class="service-includes">
+            <li>Testeo exhaustivo hasta provocar la falla.</li>
+            <li>Revisión completa de todos los componentes.</li>
+            <li>Entrega de un informe con posibles soluciones.</li>
+            <li>El valor se abona al servicio de reparación si aceptas.</li>
+          </ul>
+          <p class="service-note">Traer el equipo a nuestro local.</p>
+          <button class="service-buy-btn add-to-cart-btn" data-id="s2" data-name="Diagnóstico PC/Notebook" data-price="25000">
+            Contratar por $25.000
+          </button>
+        </div>
+        
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-desktop"></i></div>
+          <h3>Mantenimiento Estándar PC</h3>
+          <ul class="service-includes">
+            <li>Cambio de pasta térmica.</li>
+            <li>Limpieza interna y externa detallada.</li>
+            <li>Gestión de cables (si es necesario).</li>
+            <li>Testeo de rendimiento.</li>
+            <li><b>Opcional:</b> Formateo (Win 10/11 Pro).</li>
+          </ul>
+          <p class="service-note">Deja tus componentes relucientes.</p>
+          <button class="service-buy-btn add-to-cart-btn" data-id="s3" data-name="Mantenimiento Estándar PC" data-price="60000">
+            Contratar por $60.000
+          </button>
+        </div>
+        
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-gamepad"></i></div>
+          <h3>Mantenimiento de Consolas</h3>
+          <p>Realizamos servicio de mantenimiento completo (Limpieza y cambio de pasta) a las siguientes consolas:</p>
+          <ul class="service-includes">
+            <li>Xbox 360 / One / Series</li>
+            <li>PlayStation 4 / 5</li>
+            <li>Nintendo Switch (Consulta)</li>
+          </ul>
+          <p class="service-note">El precio varía según el modelo.</p>
+          <a href="#commission" class="service-buy-btn">Consultar Valores</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="showroom" class="showroom-section">
+      <h2 class="section-title">Componentes a Pedido</h2>
+      <p class="section-subtitle">¿Buscas algo específico? Lo conseguimos por ti. Revisa nuestros items más solicitados.</p>
+      
+      <div class="showroom-grid">
+        
+        <div class="product-card reveal">
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1629752187622-b07f7f3e1a0a" alt="Tarjeta de Video" class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Tarjeta de Video (Ej: RTX 4070)</h3>
+            <span class="product-category">Tarjetas de Video</span>
+            <div class="product-price-tag">Precio a Cotizar</div>
+            <a href="#commission" class="quote-btn">Cotizar Componente</a>
+          </div>
+        </div>
+        
+        <div class="product-card reveal">
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1591799263155-d8359d20b64b" alt="Procesador" class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Procesador (Ej: Ryzen 7 7800X3D)</h3>
+            <span class="product-category">Procesadores</span>
+            <div class="product-price-tag">Precio a Cotizar</div>
+            <a href="#commission" class="quote-btn">Cotizar Componente</a>
+          </div>
+        </div>
+        
+        <div class="product-card reveal">
+          <div class="product-image-container">
+            <img src="httpsre://images.unsplash.com/photo-1604368236544-e6b73817102e" alt="Placa Madre" class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Placa Madre (Ej: B650-E)</h3>
+            <span class="product-category">Placas Madre</span>
+            <div class="product-price-tag">Precio a Cotizar</div>
+            <a href="#commission" class="quote-btn">Cotizar Componente</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="testimonios" class="testimonials-section reveal">
+      <h2 class="section-title">Qué dicen nuestros clientes</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>"10/10. Mi notebook gamer estaba hirviendo y ahora las temperaturas no pasan de 70°C jugando. Un trabajo súper limpio y profesional."</p>
+          <span class="testimonial-author">- Javier R.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>"Le llevé mi PC que no daba video y en 2 días lo diagnosticaron (era la RAM) y me la cambiaron. Súper transparente todo el proceso."</p>
+          <span class="testimonial-author">- Camila G.</span>
+        </div>
+        <div class="testimonial-card">
+          <p>"Excelente servicio. Les pedí un procesador que no encontraba en ningún lado y me lo consiguieron más barato que en retail. Secos."</p>
+          <span class="testimonial-author">- Matías L.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="commission" class="commission-section">
+      <h2 class="section-title">Contáctanos</h2>
+      <p class="section-subtitle">Cuéntanos qué necesitas. Ya sea una mantención, un servicio de urgencia o un componente que no encuentras.</p>
+      <form action="https://formspree.io/f/xzzewejd" method="POST" class="commission-form reveal">
+        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+        <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+        <textarea name="vision" placeholder="Describe tu consulta o el componente que buscas..." required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vicho Labs - Soporte Técnico y Componentes a Pedido.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

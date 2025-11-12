@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finalizar Compra - Vicho Labs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="page-checkout">
+
+  <header class="header" id="main-header">
+    <div class="header-content">
+      <img src="logo.png" alt="Logo Vicho Labs" class="logo" />
+      <h1>VICHO LABS</h1>
+    </div>
+    <nav class="navbar" id="main-nav">
+      <a href="index.html#services">Servicios</a>
+      <a href="index.html#showroom">Componentes</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#commission">Contacto</a>
+      <div class="cart-icon-container" id="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-counter">0</span>
+      </div>
+    </nav>
+    <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <div class="cart-sidebar" id="cart-sidebar">
+    <h2>Tu Carrito</h2>
+    <div id="cart-items"><p>Tu carrito está vacío.</p></div>
+    <div class="cart-total"><strong>Total:</strong> <span id="cart-total-price">$0.00</span></div>
+    <a href="checkout.html" class="checkout-btn">Finalizar Compra</a>
+  </div>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <main class="checkout-page-container">
+    <div class="checkout-content">
+      <h2 class="section-title">Resumen de pedido</h2>
+
+      <form class="checkout-form-container" id="checkout-form" action="https://formspree.io/f/xzzewejd" method="POST">
+        
+        <div class="billing-details">
+          <h3>Detalles de pedido</h3>
+          
+          <div class="checkout-form-inner">
+            <div class="form-row form-row-full">
+              <p>Tienes un cupon? <a href="#" class="coupon-link">Click aqui para ingresar tu codigo</a></p>
+            </div>
+            
+            <div class="form-row form-row-half">
+              <label for="billing_first_name">Nombre *</label>
+              <input type="text" id="billing_first_name" name="Nombre" required>
+            </div>
+            
+            <div class="form-row form-row-half">
+              <label for="billing_last_name">Apellidos *</label>
+              <input type="text" id="billing_last_name" name="Apellidos" required>
+            </div>
+
+            <div class="form-row form-row-full">
+              <label for="billing_company">Nombre de la empresa (opcional)</label>
+              <input type="text" id="billing_company" name="Empresa">
+            </div>
+
+            <div class="form-row form-row-full">
+              <label for="billing_country">País / Región *</label>
+              <input type="text" id="billing_country" name="Pais" value="Chile" readonly>
+            </div>
+
+            <div class="form-row form-row-full">
+              <label for="billing_address_1">Dirección de la calle *</label>
+              <input type="text" id="billing_address_1" name="Direccion" placeholder="Nombre de la calle y número de la casa" required>
+            </div>
+
+            <div class="form-row form-row-full">
+              <label for="billing_address_2">Apartamento, habitación, escalera, etc. (opcional)</label>
+              <input type="text" id="billing_address_2" name="Direccion_Opcional" placeholder="Apartamento, habitación, etc. (opcional)">
+            </div>
+            
+            <div class="form-row form-row-full">
+              <label for="billing_city">Población *</label>
+              <input type="text" id="billing_city" name="Poblacion" required>
+            </div>
+
+            <div class="form-row form-row-full">
+              <label for="billing_state">Región *</label>
+              <input type="text" id="billing_state" name="Region" value="Región Metropolitana de Santiago" readonly>
+            </div>
+
+            <div class="form-row form-row-half">
+              <label for="billing_phone">Teléfono *</label>
+              <input type="tel" id="billing_phone" name="Telefono" required>
+            </div>
+            
+            <div class="form-row form-row-half">
+              <label for="billing_email">Dirección de correo electrónico *</label>
+              <input type="email" id="billing_email" name="Email" required>
+            </div>
+            
+            <div class="form-row form-row-full">
+              <label for="order_comments">Notas del pedido (opcional)</label>
+              <textarea id="order_comments" name="Notas_Pedido" placeholder="Notas sobre tu pedido, ej. notas especiales para la entrega."></textarea>
+            </div>
+
+            <textarea id="order_data" name="Resumen_Pedido" style="display: none;"></textarea>
+
+          </div>
+        </div>
+
+        <div class="order-summary">
+          <h3>Tu Pedido</h3>
+          <div id="order-summary-list">
+            <p>Cargando tu carrito...</p>
+          </div>
+          <div class="order-summary-total">
+            <strong>Total:</strong> <span id="order-total-price">$0.00</span>
+          </div>
+
+          <p class="payment-note">Realiza tu pedido y te contactaremos a la brevedad para coordinar el pago (transferencia o efectivo) y la entrega/recepción del equipo.</p>
+          <button type="submit" class="checkout-btn-full">Realizar Pedido</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vicho Labs - Soporte Técnico y Componentes a Pedido.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
